@@ -8,6 +8,7 @@
 
 #import "GKViewController.h"
 #define kGenericTaskRewardKarmaPoints 40
+#define kSurveyUrl @"https://docs.google.com/forms/d/1xa8hBW3ESP8S0XsPFPlQB_eK2iaft406xY4FjWuJzuM/viewform"
 
 @interface GKViewController () {
     IBOutlet UILabel *karmaScoreLabel;
@@ -20,6 +21,7 @@
 
 -(IBAction)completeTask:(id)sender;
 -(IBAction)skipTask:(id)sender;
+-(IBAction)tapActionButton:(id)sender;
 -(void)increaseKarmaScore;
 -(void)showNextTask;
 -(void)setTaskTextFieldWithString:(NSString *)string;
@@ -52,6 +54,11 @@
 
 -(IBAction)skipTask:(id)sender {
     [self showNextTask];
+}
+
+-(IBAction)tapActionButton:(id)sender {
+    NSURL *url = [[NSURL alloc] initWithString:kSurveyUrl];
+    [[UIApplication sharedApplication] openURL:url];
 }
 
 -(void)increaseKarmaScore {

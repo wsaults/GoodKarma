@@ -119,6 +119,23 @@
                                     <outlet property="delegate" destination="lrL-pw-e6s" id="ub9-hZ-wju"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BW8-FL-fDR">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="23" id="5aF-ok-arP"/>
+                                    <constraint firstAttribute="height" constant="18" id="jZM-oh-Brt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" backgroundImage="212-action2.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="212-action2.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapActionButton:" destination="lrL-pw-e6s" eventType="touchUpInside" id="Hhh-uj-VNG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -126,8 +143,10 @@
                             <constraint firstItem="5pm-Wn-GIc" firstAttribute="leading" secondItem="WzB-Ha-wFj" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="0ei-Kl-qIt"/>
                             <constraint firstItem="WzB-Ha-wFj" firstAttribute="top" secondItem="9ml-19-9Jj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1J5-2n-DsC"/>
                             <constraint firstItem="I07-3d-Cqu" firstAttribute="top" secondItem="zRK-qz-Z5b" secondAttribute="top" constant="73" id="7Ni-kL-lpA"/>
+                            <constraint firstAttribute="trailing" secondItem="BW8-FL-fDR" secondAttribute="trailing" constant="13" id="EWo-Hf-yvh"/>
                             <constraint firstItem="5pm-Wn-GIc" firstAttribute="top" secondItem="9ml-19-9Jj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FZL-ZW-Uwp"/>
                             <constraint firstAttribute="trailing" secondItem="erT-Lh-sb4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="GPQ-VJ-k2c"/>
+                            <constraint firstItem="BW8-FL-fDR" firstAttribute="top" secondItem="zRK-qz-Z5b" secondAttribute="top" constant="15" id="Gz0-8B-AVL"/>
                             <constraint firstItem="9ml-19-9Jj" firstAttribute="leading" secondItem="zRK-qz-Z5b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JHb-B9-OBg"/>
                             <constraint firstItem="FsT-tV-TgR" firstAttribute="top" secondItem="zRK-qz-Z5b" secondAttribute="top" constant="82" id="MvI-JS-4cM"/>
                             <constraint firstItem="erT-Lh-sb4" firstAttribute="leading" secondItem="zRK-qz-Z5b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Qg3-Su-KgK"/>
@@ -158,6 +177,7 @@
     <resources>
         <image name="111-user.png" width="24" height="21"/>
         <image name="19-circle-check.png" width="28" height="28"/>
+        <image name="212-action2.png" width="23" height="18"/>
         <image name="23-circle-no.png" width="28" height="28"/>
     </resources>
     <classes>
@@ -169,6 +189,7 @@
             <relationships>
                 <relationship kind="action" name="completeTask:"/>
                 <relationship kind="action" name="skipTask:"/>
+                <relationship kind="action" name="tapActionButton:"/>
                 <relationship kind="outlet" name="karmaScoreLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="taskHistoryCollectionView" candidateClass="UICollectionView"/>
                 <relationship kind="outlet" name="taskTextField" candidateClass="UITextField"/>
@@ -179,6 +200,9 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
