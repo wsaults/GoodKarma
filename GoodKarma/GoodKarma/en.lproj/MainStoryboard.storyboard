@@ -54,19 +54,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srn-GA-ZTF">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Give someone a high-five">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="completeTask:" destination="lrL-pw-e6s" eventType="touchUpInside" id="1Nu-03-61E"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="111-user.png" translatesAutoresizingMaskIntoConstraints="NO" id="I07-3d-Cqu"/>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="John Doe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isi-qD-ehq">
                                 <constraints>
@@ -85,26 +72,82 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pm-Wn-GIc">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="19-circle-check.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="19-circle-check.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="completeTask:" destination="lrL-pw-e6s" eventType="touchUpInside" id="0WC-6K-cya"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WzB-Ha-wFj">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="23-circle-no.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="23-circle-no.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipTask:" destination="lrL-pw-e6s" eventType="touchUpInside" id="obC-FT-aFs"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Give someone a high-five" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ml-19-9Jj">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5bc-Sq-BKo">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="131" id="SdU-PJ-boe"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="83B-Zv-Z7r">
+                                    <size key="itemSize" width="300" height="17"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="lrL-pw-e6s" id="mzR-np-ujV"/>
+                                    <outlet property="delegate" destination="lrL-pw-e6s" id="ub9-hZ-wju"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5bc-Sq-BKo" firstAttribute="bottom" secondItem="zRK-qz-Z5b" secondAttribute="bottom" type="default" id="09A-7e-TOs"/>
+                            <constraint firstItem="5pm-Wn-GIc" firstAttribute="leading" secondItem="WzB-Ha-wFj" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="0ei-Kl-qIt"/>
+                            <constraint firstItem="WzB-Ha-wFj" firstAttribute="top" secondItem="9ml-19-9Jj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1J5-2n-DsC"/>
                             <constraint firstItem="I07-3d-Cqu" firstAttribute="top" secondItem="zRK-qz-Z5b" secondAttribute="top" constant="73" id="7Ni-kL-lpA"/>
+                            <constraint firstItem="5pm-Wn-GIc" firstAttribute="top" secondItem="9ml-19-9Jj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FZL-ZW-Uwp"/>
                             <constraint firstAttribute="trailing" secondItem="erT-Lh-sb4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="GPQ-VJ-k2c"/>
+                            <constraint firstItem="9ml-19-9Jj" firstAttribute="leading" secondItem="zRK-qz-Z5b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JHb-B9-OBg"/>
                             <constraint firstItem="FsT-tV-TgR" firstAttribute="top" secondItem="zRK-qz-Z5b" secondAttribute="top" constant="82" id="MvI-JS-4cM"/>
-                            <constraint firstItem="I07-3d-Cqu" firstAttribute="leading" secondItem="zRK-qz-Z5b" secondAttribute="leading" constant="46" id="OKg-aI-EyO"/>
                             <constraint firstItem="erT-Lh-sb4" firstAttribute="leading" secondItem="zRK-qz-Z5b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Qg3-Su-KgK"/>
+                            <constraint firstItem="I07-3d-Cqu" firstAttribute="leading" secondItem="zRK-qz-Z5b" secondAttribute="leading" constant="46" id="TpH-Il-ZG1"/>
+                            <constraint firstAttribute="trailing" secondItem="9ml-19-9Jj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Wes-Mf-LS5"/>
                             <constraint firstItem="isi-qD-ehq" firstAttribute="leading" secondItem="I07-3d-Cqu" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Yhh-5Q-su2"/>
                             <constraint firstItem="isi-qD-ehq" firstAttribute="top" secondItem="zRK-qz-Z5b" secondAttribute="top" constant="68" id="bpM-QU-TbW"/>
-                            <constraint firstItem="srn-GA-ZTF" firstAttribute="top" secondItem="erT-Lh-sb4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="efJ-x3-EgR"/>
+                            <constraint firstItem="5bc-Sq-BKo" firstAttribute="top" secondItem="WzB-Ha-wFj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="epP-hl-USs"/>
                             <constraint firstItem="FsT-tV-TgR" firstAttribute="leading" secondItem="I07-3d-Cqu" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="jUp-RL-lMr"/>
-                            <constraint firstAttribute="trailing" secondItem="srn-GA-ZTF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kfH-gh-o5x"/>
-                            <constraint firstItem="srn-GA-ZTF" firstAttribute="leading" secondItem="zRK-qz-Z5b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mT2-qr-gj3"/>
-                            <constraint firstItem="erT-Lh-sb4" firstAttribute="centerY" secondItem="zRK-qz-Z5b" secondAttribute="centerY" type="default" id="tkM-8I-qOs"/>
+                            <constraint firstItem="5bc-Sq-BKo" firstAttribute="trailing" secondItem="zRK-qz-Z5b" secondAttribute="trailing" type="default" id="k95-2H-U8b"/>
+                            <constraint firstItem="erT-Lh-sb4" firstAttribute="top" secondItem="zRK-qz-Z5b" secondAttribute="top" constant="138" id="pEQ-Wh-V5o"/>
+                            <constraint firstItem="5bc-Sq-BKo" firstAttribute="leading" secondItem="zRK-qz-Z5b" secondAttribute="leading" type="default" id="wYm-u8-2nb"/>
+                            <constraint firstAttribute="trailing" secondItem="5pm-Wn-GIc" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xJQ-UU-JJA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Kv7-Cu-mGq"/>
                     <connections>
                         <outlet property="karmaScoreLabel" destination="erT-Lh-sb4" id="VyR-Uo-YF6"/>
+                        <outlet property="taskHistoryCollectionView" destination="5bc-Sq-BKo" id="A3v-aZ-eab"/>
+                        <outlet property="taskTextField" destination="9ml-19-9Jj" id="ayw-Oe-A4n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KgX-NP-hzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -114,6 +157,8 @@
     </scenes>
     <resources>
         <image name="111-user.png" width="24" height="21"/>
+        <image name="19-circle-check.png" width="28" height="28"/>
+        <image name="23-circle-no.png" width="28" height="28"/>
     </resources>
     <classes>
         <class className="GKLoginViewController" superclassName="UIViewController">
@@ -123,11 +168,17 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GKViewController.h"/>
             <relationships>
                 <relationship kind="action" name="completeTask:"/>
+                <relationship kind="action" name="skipTask:"/>
                 <relationship kind="outlet" name="karmaScoreLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="taskHistoryCollectionView" candidateClass="UICollectionView"/>
+                <relationship kind="outlet" name="taskTextField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

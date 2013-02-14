@@ -11,6 +11,11 @@
 		4C6BDBC716CD3FB300A65CD6 /* 24-person@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6BDBC516CD3FB300A65CD6 /* 24-person@2x.png */; };
 		4C6BDBCA16CD40CC00A65CD6 /* 111-user.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6BDBC816CD40CC00A65CD6 /* 111-user.png */; };
 		4C6BDBCB16CD40CC00A65CD6 /* 111-user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6BDBC916CD40CC00A65CD6 /* 111-user@2x.png */; };
+		4C6BDBCE16CD432D00A65CD6 /* 19-circle-check.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6BDBCC16CD432D00A65CD6 /* 19-circle-check.png */; };
+		4C6BDBCF16CD432D00A65CD6 /* 19-circle-check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6BDBCD16CD432D00A65CD6 /* 19-circle-check@2x.png */; };
+		4C6BDBD216CD433400A65CD6 /* 23-circle-no.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6BDBD016CD433400A65CD6 /* 23-circle-no.png */; };
+		4C6BDBD316CD433400A65CD6 /* 23-circle-no@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C6BDBD116CD433400A65CD6 /* 23-circle-no@2x.png */; };
+		4C6BDBD516CD441300A65CD6 /* Tasks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C6BDBD416CD441300A65CD6 /* Tasks.plist */; };
 		BED1497B16CB421300D83D1F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED1497A16CB421300D83D1F /* UIKit.framework */; };
 		BED1497D16CB421300D83D1F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED1497C16CB421300D83D1F /* Foundation.framework */; };
 		BED1497F16CB421300D83D1F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED1497E16CB421300D83D1F /* CoreGraphics.framework */; };
@@ -30,6 +35,11 @@
 		4C6BDBC516CD3FB300A65CD6 /* 24-person@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "24-person@2x.png"; sourceTree = "<group>"; };
 		4C6BDBC816CD40CC00A65CD6 /* 111-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "111-user.png"; sourceTree = "<group>"; };
 		4C6BDBC916CD40CC00A65CD6 /* 111-user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "111-user@2x.png"; sourceTree = "<group>"; };
+		4C6BDBCC16CD432D00A65CD6 /* 19-circle-check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-circle-check.png"; sourceTree = "<group>"; };
+		4C6BDBCD16CD432D00A65CD6 /* 19-circle-check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-circle-check@2x.png"; sourceTree = "<group>"; };
+		4C6BDBD016CD433400A65CD6 /* 23-circle-no.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "23-circle-no.png"; sourceTree = "<group>"; };
+		4C6BDBD116CD433400A65CD6 /* 23-circle-no@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "23-circle-no@2x.png"; sourceTree = "<group>"; };
+		4C6BDBD416CD441300A65CD6 /* Tasks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Tasks.plist; sourceTree = "<group>"; };
 		BED1497716CB421300D83D1F /* GoodKarma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodKarma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BED1497A16CB421300D83D1F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BED1497C16CB421300D83D1F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,6 +119,10 @@
 		BED1498116CB421300D83D1F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4C6BDBD016CD433400A65CD6 /* 23-circle-no.png */,
+				4C6BDBD116CD433400A65CD6 /* 23-circle-no@2x.png */,
+				4C6BDBCC16CD432D00A65CD6 /* 19-circle-check.png */,
+				4C6BDBCD16CD432D00A65CD6 /* 19-circle-check@2x.png */,
 				4C6BDBC816CD40CC00A65CD6 /* 111-user.png */,
 				4C6BDBC916CD40CC00A65CD6 /* 111-user@2x.png */,
 				4C6BDBC416CD3FB300A65CD6 /* 24-person.png */,
@@ -120,6 +134,7 @@
 				BED1498C16CB421300D83D1F /* Default.png */,
 				BED1498E16CB421300D83D1F /* Default@2x.png */,
 				BED1499016CB421300D83D1F /* Default-568h@2x.png */,
+				4C6BDBD416CD441300A65CD6 /* Tasks.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -185,6 +200,11 @@
 				4C6BDBC716CD3FB300A65CD6 /* 24-person@2x.png in Resources */,
 				4C6BDBCA16CD40CC00A65CD6 /* 111-user.png in Resources */,
 				4C6BDBCB16CD40CC00A65CD6 /* 111-user@2x.png in Resources */,
+				4C6BDBCE16CD432D00A65CD6 /* 19-circle-check.png in Resources */,
+				4C6BDBCF16CD432D00A65CD6 /* 19-circle-check@2x.png in Resources */,
+				4C6BDBD216CD433400A65CD6 /* 23-circle-no.png in Resources */,
+				4C6BDBD316CD433400A65CD6 /* 23-circle-no@2x.png in Resources */,
+				4C6BDBD516CD441300A65CD6 /* Tasks.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

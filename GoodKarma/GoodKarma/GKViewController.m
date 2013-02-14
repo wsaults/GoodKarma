@@ -11,7 +11,18 @@
 
 @interface GKViewController () {
     IBOutlet UILabel *karmaScoreLabel;
+    IBOutlet UITextField *taskTextField;
+    NSArray *tasks;
+    NSMutableArray *taskHistory;
+    
+    IBOutlet UICollectionView *taskHistoryCollectionView;
 }
+
+-(IBAction)completeTask:(id)sender;
+-(IBAction)skipTask:(id)sender;
+-(void)increaseKarmaScore;
+-(void)showNextTask;
+-(void)setTaskTextFieldWithString:(NSString *)string;
 
 @end
 
@@ -20,7 +31,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    taskHistory = [NSMutableArray new];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Tasks" ofType:@"plist"];
+    tasks = [[NSArray alloc] initWithContentsOfFile:path];
+    [self setTaskTextFieldWithString:[tasks objectAtIndex:0]];
+    
+    [taskHistoryCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,8 +50,45 @@
     [self increaseKarmaScore];
 }
 
+-(IBAction)skipTask:(id)sender {
+    [self showNextTask];
+}
+
 -(void)increaseKarmaScore {
     [karmaScoreLabel setText:[NSString stringWithFormat:@"%d", [[karmaScoreLabel text] integerValue] + kGenericTaskRewardKarmaPoints]];
+    [self showNextTask];
+}
+
+-(void)showNextTask {
+    [taskHistory addObject:[NSString stringWithFormat:@"%@", taskTextField.text]];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:0];
+    [taskHistoryCollectionView insertItemsAtIndexPaths:@[indexPath]];
+    [self setTaskTextFieldWithString:[tasks objectAtIndex:arc4random() % [tasks count]]];
+}
+
+-(void)setTaskTextFieldWithString:(NSString *)string {
+    [taskTextField setText:string];
+}
+
+#pragma mark - Collection View methods
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return [taskHistory count];
+}
+
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    NSArray *reversedArray = [[taskHistory reverseObjectEnumerator] allObjects];
+    UILabel *taskText = [[UILabel alloc] initWithFrame:cell.frame];
+    [taskText setText:[reversedArray objectAtIndex:indexPath.row]];
+    [taskText setFont:[UIFont systemFontOfSize:12]];
+    [taskText setTextAlignment:NSTextAlignmentCenter];
+    
+    [cell addSubview:taskText];
+    
+    return cell;
 }
 
 @end
