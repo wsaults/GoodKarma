@@ -67,12 +67,36 @@
                                     <action selector="completeTask:" destination="lrL-pw-e6s" eventType="touchUpInside" id="1Nu-03-61E"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="111-user.png" translatesAutoresizingMaskIntoConstraints="NO" id="I07-3d-Cqu"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="John Doe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isi-qD-ehq">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="uKO-Ul-xsv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="subtext" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsT-tV-TgR">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="7FY-JL-ocY"/>
+                                    <constraint firstAttribute="height" constant="21" id="7ex-FD-X1K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="I07-3d-Cqu" firstAttribute="top" secondItem="zRK-qz-Z5b" secondAttribute="top" constant="73" id="7Ni-kL-lpA"/>
                             <constraint firstAttribute="trailing" secondItem="erT-Lh-sb4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="GPQ-VJ-k2c"/>
+                            <constraint firstItem="FsT-tV-TgR" firstAttribute="top" secondItem="zRK-qz-Z5b" secondAttribute="top" constant="82" id="MvI-JS-4cM"/>
+                            <constraint firstItem="I07-3d-Cqu" firstAttribute="leading" secondItem="zRK-qz-Z5b" secondAttribute="leading" constant="46" id="OKg-aI-EyO"/>
                             <constraint firstItem="erT-Lh-sb4" firstAttribute="leading" secondItem="zRK-qz-Z5b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Qg3-Su-KgK"/>
+                            <constraint firstItem="isi-qD-ehq" firstAttribute="leading" secondItem="I07-3d-Cqu" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Yhh-5Q-su2"/>
+                            <constraint firstItem="isi-qD-ehq" firstAttribute="top" secondItem="zRK-qz-Z5b" secondAttribute="top" constant="68" id="bpM-QU-TbW"/>
                             <constraint firstItem="srn-GA-ZTF" firstAttribute="top" secondItem="erT-Lh-sb4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="efJ-x3-EgR"/>
+                            <constraint firstItem="FsT-tV-TgR" firstAttribute="leading" secondItem="I07-3d-Cqu" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="jUp-RL-lMr"/>
                             <constraint firstAttribute="trailing" secondItem="srn-GA-ZTF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kfH-gh-o5x"/>
                             <constraint firstItem="srn-GA-ZTF" firstAttribute="leading" secondItem="zRK-qz-Z5b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="mT2-qr-gj3"/>
                             <constraint firstItem="erT-Lh-sb4" firstAttribute="centerY" secondItem="zRK-qz-Z5b" secondAttribute="centerY" type="default" id="tkM-8I-qOs"/>
@@ -88,6 +112,9 @@
             <point key="canvasLocation" x="451" y="101"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="111-user.png" width="24" height="21"/>
+    </resources>
     <classes>
         <class className="GKLoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GKLoginViewController.h"/>
