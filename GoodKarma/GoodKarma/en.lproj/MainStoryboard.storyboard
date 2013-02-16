@@ -1,43 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lrL-pw-e6s">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
-        <scene sceneID="5">
-            <objects>
-                <viewController id="2" customClass="GKLoginViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvs-4N-ybT">
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="login with facebook">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="lrL-pw-e6s" kind="modal" modalTransitionStyle="flipHorizontal" id="jfU-MO-gtD"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Bvs-4N-ybT" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8G0-rB-qgS"/>
-                            <constraint firstItem="Bvs-4N-ybT" firstAttribute="top" secondItem="3" secondAttribute="top" constant="208" id="JPZ-gi-xYE"/>
-                            <constraint firstItem="Bvs-4N-ybT" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="kj7-aW-waj"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="44" y="101"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="D24-B6-yEU">
             <objects>
@@ -54,10 +20,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="111-user.png" translatesAutoresizingMaskIntoConstraints="NO" id="I07-3d-Cqu"/>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="John Doe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isi-qD-ehq">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="83" id="uKO-Ul-xsv"/>
+                                    <constraint firstAttribute="width" constant="191" id="yw4-yG-gH5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -66,7 +31,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="subtext" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsT-tV-TgR">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="106" id="7FY-JL-ocY"/>
-                                    <constraint firstAttribute="height" constant="21" id="7ex-FD-X1K"/>
+                                    <constraint firstAttribute="height" constant="21" id="BLg-jW-gCg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -98,14 +63,14 @@
                                     <action selector="skipTask:" destination="lrL-pw-e6s" eventType="touchUpInside" id="obC-FT-aFs"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Give someone a high-five" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ml-19-9Jj">
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Give someone a high-five" borderStyle="roundedRect" textAlignment="center" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="9ml-19-9Jj">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5bc-Sq-BKo">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="131" id="SdU-PJ-boe"/>
+                                    <constraint firstAttribute="height" constant="131" id="cBk-5R-9wQ"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="83B-Zv-Z7r">
                                     <size key="itemSize" width="300" height="17"/>
@@ -136,29 +101,34 @@
                                     <action selector="tapActionButton:" destination="lrL-pw-e6s" eventType="touchUpInside" id="Hhh-uj-VNG"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JWD-cU-fg6" customClass="FBProfilePictureView">
+                                <color key="backgroundColor" red="0.92966757020000002" green="0.92966757020000002" blue="0.92966757020000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5bc-Sq-BKo" firstAttribute="bottom" secondItem="zRK-qz-Z5b" secondAttribute="bottom" type="default" id="09A-7e-TOs"/>
                             <constraint firstItem="5pm-Wn-GIc" firstAttribute="leading" secondItem="WzB-Ha-wFj" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="0ei-Kl-qIt"/>
                             <constraint firstItem="WzB-Ha-wFj" firstAttribute="top" secondItem="9ml-19-9Jj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1J5-2n-DsC"/>
-                            <constraint firstItem="I07-3d-Cqu" firstAttribute="top" secondItem="zRK-qz-Z5b" secondAttribute="top" constant="73" id="7Ni-kL-lpA"/>
+                            <constraint firstAttribute="trailing" secondItem="JWD-cU-fg6" secondAttribute="trailing" constant="225" id="5Of-rI-XW0"/>
                             <constraint firstAttribute="trailing" secondItem="BW8-FL-fDR" secondAttribute="trailing" constant="13" id="EWo-Hf-yvh"/>
                             <constraint firstItem="5pm-Wn-GIc" firstAttribute="top" secondItem="9ml-19-9Jj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FZL-ZW-Uwp"/>
                             <constraint firstAttribute="trailing" secondItem="erT-Lh-sb4" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="GPQ-VJ-k2c"/>
                             <constraint firstItem="BW8-FL-fDR" firstAttribute="top" secondItem="zRK-qz-Z5b" secondAttribute="top" constant="15" id="Gz0-8B-AVL"/>
                             <constraint firstItem="9ml-19-9Jj" firstAttribute="leading" secondItem="zRK-qz-Z5b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="JHb-B9-OBg"/>
-                            <constraint firstItem="FsT-tV-TgR" firstAttribute="top" secondItem="zRK-qz-Z5b" secondAttribute="top" constant="82" id="MvI-JS-4cM"/>
                             <constraint firstItem="erT-Lh-sb4" firstAttribute="leading" secondItem="zRK-qz-Z5b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Qg3-Su-KgK"/>
-                            <constraint firstItem="I07-3d-Cqu" firstAttribute="leading" secondItem="zRK-qz-Z5b" secondAttribute="leading" constant="46" id="TpH-Il-ZG1"/>
+                            <constraint firstItem="JWD-cU-fg6" firstAttribute="leading" secondItem="zRK-qz-Z5b" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Qje-O0-vpR"/>
+                            <constraint firstItem="FsT-tV-TgR" firstAttribute="top" secondItem="zRK-qz-Z5b" secondAttribute="top" constant="82" id="Uey-ej-hZW"/>
                             <constraint firstAttribute="trailing" secondItem="9ml-19-9Jj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Wes-Mf-LS5"/>
-                            <constraint firstItem="isi-qD-ehq" firstAttribute="leading" secondItem="I07-3d-Cqu" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Yhh-5Q-su2"/>
+                            <constraint firstItem="isi-qD-ehq" firstAttribute="leading" secondItem="FsT-tV-TgR" secondAttribute="leading" type="default" id="X8G-W3-FE8"/>
                             <constraint firstItem="isi-qD-ehq" firstAttribute="top" secondItem="zRK-qz-Z5b" secondAttribute="top" constant="68" id="bpM-QU-TbW"/>
                             <constraint firstItem="5bc-Sq-BKo" firstAttribute="top" secondItem="WzB-Ha-wFj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="epP-hl-USs"/>
-                            <constraint firstItem="FsT-tV-TgR" firstAttribute="leading" secondItem="I07-3d-Cqu" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="jUp-RL-lMr"/>
+                            <constraint firstAttribute="trailing" secondItem="isi-qD-ehq" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="k00-RF-4Bt"/>
                             <constraint firstItem="5bc-Sq-BKo" firstAttribute="trailing" secondItem="zRK-qz-Z5b" secondAttribute="trailing" type="default" id="k95-2H-U8b"/>
-                            <constraint firstItem="erT-Lh-sb4" firstAttribute="top" secondItem="zRK-qz-Z5b" secondAttribute="top" constant="138" id="pEQ-Wh-V5o"/>
+                            <constraint firstItem="erT-Lh-sb4" firstAttribute="top" secondItem="JWD-cU-fg6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ksQ-Xx-wcv"/>
+                            <constraint firstItem="JWD-cU-fg6" firstAttribute="top" secondItem="zRK-qz-Z5b" secondAttribute="top" constant="55" id="mXG-rZ-vkJ"/>
                             <constraint firstItem="5bc-Sq-BKo" firstAttribute="leading" secondItem="zRK-qz-Z5b" secondAttribute="leading" type="default" id="wYm-u8-2nb"/>
+                            <constraint firstItem="JWD-cU-fg6" firstAttribute="centerY" secondItem="FsT-tV-TgR" secondAttribute="centerY" type="default" id="wuQ-tm-25c"/>
                             <constraint firstAttribute="trailing" secondItem="5pm-Wn-GIc" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xJQ-UU-JJA"/>
                         </constraints>
                     </view>
@@ -167,6 +137,8 @@
                         <outlet property="karmaScoreLabel" destination="erT-Lh-sb4" id="VyR-Uo-YF6"/>
                         <outlet property="taskHistoryCollectionView" destination="5bc-Sq-BKo" id="A3v-aZ-eab"/>
                         <outlet property="taskTextField" destination="9ml-19-9Jj" id="ayw-Oe-A4n"/>
+                        <outlet property="userNameLabel" destination="isi-qD-ehq" id="ZHt-hP-LD4"/>
+                        <outlet property="userProfileImage" destination="JWD-cU-fg6" id="GP6-yA-VLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KgX-NP-hzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -175,14 +147,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="111-user.png" width="24" height="21"/>
         <image name="19-circle-check.png" width="28" height="28"/>
         <image name="212-action2.png" width="23" height="18"/>
         <image name="23-circle-no.png" width="28" height="28"/>
     </resources>
     <classes>
-        <class className="GKLoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GKLoginViewController.h"/>
+        <class className="FBProfilePictureView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FBProfilePictureView.h"/>
         </class>
         <class className="GKViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GKViewController.h"/>
@@ -193,6 +164,8 @@
                 <relationship kind="outlet" name="karmaScoreLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="taskHistoryCollectionView" candidateClass="UICollectionView"/>
                 <relationship kind="outlet" name="taskTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="userNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="userProfileImage" candidateClass="FBProfilePictureView"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">

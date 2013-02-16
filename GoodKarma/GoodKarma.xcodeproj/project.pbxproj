@@ -29,7 +29,14 @@
 		BED1499116CB421300D83D1F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BED1499016CB421300D83D1F /* Default-568h@2x.png */; };
 		BED1499416CB421300D83D1F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BED1499216CB421300D83D1F /* MainStoryboard.storyboard */; };
 		BED1499716CB421300D83D1F /* GKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED1499616CB421300D83D1F /* GKViewController.m */; };
-		BED1499F16CB440F00D83D1F /* GKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BED1499E16CB440F00D83D1F /* GKLoginViewController.m */; };
+		BEE8750116CFFE7D009D7AE7 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE8750016CFFE7D009D7AE7 /* FacebookSDK.framework */; };
+		BEE8750416CFFEBD009D7AE7 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BEE8750216CFFEBD009D7AE7 /* FacebookSDKResources.bundle */; };
+		BEE8750516CFFEBD009D7AE7 /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BEE8750316CFFEBD009D7AE7 /* FBUserSettingsViewResources.bundle */; };
+		BEE8750916CFFEF5009D7AE7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE8750616CFFEF5009D7AE7 /* Accounts.framework */; };
+		BEE8750A16CFFEF5009D7AE7 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE8750716CFFEF5009D7AE7 /* AdSupport.framework */; };
+		BEE8750B16CFFEF5009D7AE7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE8750816CFFEF5009D7AE7 /* Social.framework */; };
+		BEE8751116D001B4009D7AE7 /* GKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE8750F16D001B4009D7AE7 /* GKLoginViewController.m */; };
+		BEE8751216D001B4009D7AE7 /* GKLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEE8751016D001B4009D7AE7 /* GKLoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,8 +67,15 @@
 		BED1499316CB421300D83D1F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BED1499516CB421300D83D1F /* GKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GKViewController.h; sourceTree = "<group>"; };
 		BED1499616CB421300D83D1F /* GKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKViewController.m; sourceTree = "<group>"; };
-		BED1499D16CB440F00D83D1F /* GKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKLoginViewController.h; sourceTree = "<group>"; };
-		BED1499E16CB440F00D83D1F /* GKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKLoginViewController.m; sourceTree = "<group>"; };
+		BEE8750016CFFE7D009D7AE7 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		BEE8750216CFFEBD009D7AE7 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		BEE8750316CFFEBD009D7AE7 /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
+		BEE8750616CFFEF5009D7AE7 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		BEE8750716CFFEF5009D7AE7 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		BEE8750816CFFEF5009D7AE7 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		BEE8750E16D001B4009D7AE7 /* GKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKLoginViewController.h; path = ../GKLoginViewController.h; sourceTree = "<group>"; };
+		BEE8750F16D001B4009D7AE7 /* GKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKLoginViewController.m; path = ../GKLoginViewController.m; sourceTree = "<group>"; };
+		BEE8751016D001B4009D7AE7 /* GKLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GKLoginViewController.xib; path = ../GKLoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +83,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEE8750916CFFEF5009D7AE7 /* Accounts.framework in Frameworks */,
+				BEE8750A16CFFEF5009D7AE7 /* AdSupport.framework in Frameworks */,
+				BEE8750B16CFFEF5009D7AE7 /* Social.framework in Frameworks */,
 				BED1497B16CB421300D83D1F /* UIKit.framework in Frameworks */,
 				BED1497D16CB421300D83D1F /* Foundation.framework in Frameworks */,
 				BED1497F16CB421300D83D1F /* CoreGraphics.framework in Frameworks */,
+				BEE8750116CFFE7D009D7AE7 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +116,12 @@
 		BED1497916CB421300D83D1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BEE8750616CFFEF5009D7AE7 /* Accounts.framework */,
+				BEE8750716CFFEF5009D7AE7 /* AdSupport.framework */,
+				BEE8750816CFFEF5009D7AE7 /* Social.framework */,
+				BEE8750216CFFEBD009D7AE7 /* FacebookSDKResources.bundle */,
+				BEE8750316CFFEBD009D7AE7 /* FBUserSettingsViewResources.bundle */,
+				BEE8750016CFFE7D009D7AE7 /* FacebookSDK.framework */,
 				BED1497A16CB421300D83D1F /* UIKit.framework */,
 				BED1497C16CB421300D83D1F /* Foundation.framework */,
 				BED1497E16CB421300D83D1F /* CoreGraphics.framework */,
@@ -111,8 +135,9 @@
 				BED1498916CB421300D83D1F /* GKAppDelegate.h */,
 				BED1498A16CB421300D83D1F /* GKAppDelegate.m */,
 				BED1499216CB421300D83D1F /* MainStoryboard.storyboard */,
-				BED1499D16CB440F00D83D1F /* GKLoginViewController.h */,
-				BED1499E16CB440F00D83D1F /* GKLoginViewController.m */,
+				BEE8750E16D001B4009D7AE7 /* GKLoginViewController.h */,
+				BEE8750F16D001B4009D7AE7 /* GKLoginViewController.m */,
+				BEE8751016D001B4009D7AE7 /* GKLoginViewController.xib */,
 				BED1499516CB421300D83D1F /* GKViewController.h */,
 				BED1499616CB421300D83D1F /* GKViewController.m */,
 				BED1498116CB421300D83D1F /* Supporting Files */,
@@ -213,6 +238,9 @@
 				4C6BDBD516CD441300A65CD6 /* Tasks.plist in Resources */,
 				4C6BDBD816CD7DAF00A65CD6 /* 212-action2.png in Resources */,
 				4C6BDBD916CD7DAF00A65CD6 /* 212-action2@2x.png in Resources */,
+				BEE8750416CFFEBD009D7AE7 /* FacebookSDKResources.bundle in Resources */,
+				BEE8750516CFFEBD009D7AE7 /* FBUserSettingsViewResources.bundle in Resources */,
+				BEE8751216D001B4009D7AE7 /* GKLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +254,7 @@
 				BED1498716CB421300D83D1F /* main.m in Sources */,
 				BED1498B16CB421300D83D1F /* GKAppDelegate.m in Sources */,
 				BED1499716CB421300D83D1F /* GKViewController.m in Sources */,
-				BED1499F16CB440F00D83D1F /* GKLoginViewController.m in Sources */,
+				BEE8751116D001B4009D7AE7 /* GKLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,9 +339,14 @@
 		BED1499B16CB421300D83D1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoodKarma/GoodKarma-Prefix.pch";
 				INFOPLIST_FILE = "GoodKarma/GoodKarma-Info.plist";
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -322,9 +355,14 @@
 		BED1499C16CB421300D83D1F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GoodKarma/GoodKarma-Prefix.pch";
 				INFOPLIST_FILE = "GoodKarma/GoodKarma-Info.plist";
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

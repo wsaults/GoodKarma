@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GKLoginViewController.h"
 
 @interface GKViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 

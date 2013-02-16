@@ -7,17 +7,27 @@
 //
 
 #import "GKViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
+#import "GKLoginViewController.h"
+#import "GKAppDelegate.h"
+
 #define kGenericTaskRewardKarmaPoints 40
 #define kSurveyUrl @"https://docs.google.com/forms/d/1xa8hBW3ESP8S0XsPFPlQB_eK2iaft406xY4FjWuJzuM/viewform"
 
 @interface GKViewController () {
     IBOutlet UILabel *karmaScoreLabel;
     IBOutlet UITextField *taskTextField;
+    
     NSArray *tasks;
     NSMutableArray *taskHistory;
     
     IBOutlet UICollectionView *taskHistoryCollectionView;
+    
+    GKLoginViewController* loginViewController;
 }
+
+@property (nonatomic,strong) IBOutlet FBProfilePictureView *userProfileImage;
+@property (nonatomic,strong) IBOutlet UILabel *userNameLabel;
 
 -(IBAction)completeTask:(id)sender;
 -(IBAction)skipTask:(id)sender;
@@ -40,6 +50,32 @@
     [self setTaskTextFieldWithString:[tasks objectAtIndex:0]];
     
     [taskHistoryCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionStateChanged:) name:SCSessionStateChangedNotification object:nil];
+}
+
+-(void)viewDidUnload {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    if (FBSession.activeSession.isOpen) {
+        [self populateUserDetails];
+    }
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    // If the user is not authenticated with Facebook then display the login view.
+    // See if we have a valid token for the current state.
+    if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
+        NSLog(@"FBSessionStateCreatedTokenLoaded");
+        [self populateUserDetails];
+    } else {
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,6 +132,26 @@
     [cell addSubview:taskText];
     
     return cell;
+}
+
+- (void)sessionStateChanged:(NSNotification*)notification {
+    [self populateUserDetails];
+}
+
+#pragma mark - FB user info method
+- (void)populateUserDetails {
+    NSLog(@"populateUserDetails");
+    if (FBSession.activeSession.isOpen) {        
+        [[FBRequest requestForMe] startWithCompletionHandler:
+         ^(FBRequestConnection *connection,
+           NSDictionary<FBGraphUser> *user,
+           NSError *error) {
+             if (!error) {
+                 self.userNameLabel.text = user.name;
+                 self.userProfileImage.profileID = user.id;
+             }
+         }];
+    }
 }
 
 @end

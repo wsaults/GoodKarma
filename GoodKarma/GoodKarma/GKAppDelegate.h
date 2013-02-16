@@ -7,9 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
+
+extern NSString *const SCSessionStateChangedNotification;
+
+//extern NSString *const SCSessionStateChangedNotification;
 
 @interface GKAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+- (BOOL)openSessionWithAllowLoginUI:(BOOL)allowLoginUI;
++ (NSString *)FBErrorCodeDescription:(FBErrorCode) code;
+
 
 @end
