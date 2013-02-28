@@ -37,6 +37,16 @@
 		BEE8750B16CFFEF5009D7AE7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE8750816CFFEF5009D7AE7 /* Social.framework */; };
 		BEE8751116D001B4009D7AE7 /* GKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE8750F16D001B4009D7AE7 /* GKLoginViewController.m */; };
 		BEE8751216D001B4009D7AE7 /* GKLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEE8751016D001B4009D7AE7 /* GKLoginViewController.xib */; };
+		BEE9A32716DEE719007F6BB1 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE9A31F16DEE719007F6BB1 /* Icon-72.png */; };
+		BEE9A32816DEE719007F6BB1 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE9A32016DEE719007F6BB1 /* Icon-72@2x.png */; };
+		BEE9A32916DEE719007F6BB1 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE9A32116DEE719007F6BB1 /* Icon-Small-50.png */; };
+		BEE9A32A16DEE719007F6BB1 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE9A32216DEE719007F6BB1 /* Icon-Small-50@2x.png */; };
+		BEE9A32B16DEE719007F6BB1 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE9A32316DEE719007F6BB1 /* Icon-Small.png */; };
+		BEE9A32C16DEE719007F6BB1 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE9A32416DEE719007F6BB1 /* Icon-Small@2x.png */; };
+		BEE9A32D16DEE719007F6BB1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE9A32516DEE719007F6BB1 /* Icon.png */; };
+		BEE9A32E16DEE719007F6BB1 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE9A32616DEE719007F6BB1 /* Icon@2x.png */; };
+		BEE9A33316DEE9B6007F6BB1 /* GoodKarmaLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE9A33116DEE9B5007F6BB1 /* GoodKarmaLogo.png */; };
+		BEE9A33416DEE9B6007F6BB1 /* GoodKarmaLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEE9A33216DEE9B5007F6BB1 /* GoodKarmaLogo@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +86,16 @@
 		BEE8750E16D001B4009D7AE7 /* GKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKLoginViewController.h; path = ../GKLoginViewController.h; sourceTree = "<group>"; };
 		BEE8750F16D001B4009D7AE7 /* GKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKLoginViewController.m; path = ../GKLoginViewController.m; sourceTree = "<group>"; };
 		BEE8751016D001B4009D7AE7 /* GKLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GKLoginViewController.xib; path = ../GKLoginViewController.xib; sourceTree = "<group>"; };
+		BEE9A31F16DEE719007F6BB1 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		BEE9A32016DEE719007F6BB1 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		BEE9A32116DEE719007F6BB1 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		BEE9A32216DEE719007F6BB1 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		BEE9A32316DEE719007F6BB1 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		BEE9A32416DEE719007F6BB1 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		BEE9A32516DEE719007F6BB1 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		BEE9A32616DEE719007F6BB1 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		BEE9A33116DEE9B5007F6BB1 /* GoodKarmaLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GoodKarmaLogo.png; sourceTree = "<group>"; };
+		BEE9A33216DEE9B5007F6BB1 /* GoodKarmaLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GoodKarmaLogo@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +168,16 @@
 		BED1498116CB421300D83D1F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BEE9A33116DEE9B5007F6BB1 /* GoodKarmaLogo.png */,
+				BEE9A33216DEE9B5007F6BB1 /* GoodKarmaLogo@2x.png */,
+				BEE9A31F16DEE719007F6BB1 /* Icon-72.png */,
+				BEE9A32016DEE719007F6BB1 /* Icon-72@2x.png */,
+				BEE9A32116DEE719007F6BB1 /* Icon-Small-50.png */,
+				BEE9A32216DEE719007F6BB1 /* Icon-Small-50@2x.png */,
+				BEE9A32316DEE719007F6BB1 /* Icon-Small.png */,
+				BEE9A32416DEE719007F6BB1 /* Icon-Small@2x.png */,
+				BEE9A32516DEE719007F6BB1 /* Icon.png */,
+				BEE9A32616DEE719007F6BB1 /* Icon@2x.png */,
 				4C6BDBD616CD7DAF00A65CD6 /* 212-action2.png */,
 				4C6BDBD716CD7DAF00A65CD6 /* 212-action2@2x.png */,
 				4C6BDBD016CD433400A65CD6 /* 23-circle-no.png */,
@@ -241,6 +271,16 @@
 				BEE8750416CFFEBD009D7AE7 /* FacebookSDKResources.bundle in Resources */,
 				BEE8750516CFFEBD009D7AE7 /* FBUserSettingsViewResources.bundle in Resources */,
 				BEE8751216D001B4009D7AE7 /* GKLoginViewController.xib in Resources */,
+				BEE9A32716DEE719007F6BB1 /* Icon-72.png in Resources */,
+				BEE9A32816DEE719007F6BB1 /* Icon-72@2x.png in Resources */,
+				BEE9A32916DEE719007F6BB1 /* Icon-Small-50.png in Resources */,
+				BEE9A32A16DEE719007F6BB1 /* Icon-Small-50@2x.png in Resources */,
+				BEE9A32B16DEE719007F6BB1 /* Icon-Small.png in Resources */,
+				BEE9A32C16DEE719007F6BB1 /* Icon-Small@2x.png in Resources */,
+				BEE9A32D16DEE719007F6BB1 /* Icon.png in Resources */,
+				BEE9A32E16DEE719007F6BB1 /* Icon@2x.png in Resources */,
+				BEE9A33316DEE9B6007F6BB1 /* GoodKarmaLogo.png in Resources */,
+				BEE9A33416DEE9B6007F6BB1 /* GoodKarmaLogo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
