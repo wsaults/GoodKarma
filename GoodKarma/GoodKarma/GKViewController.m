@@ -10,9 +10,10 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "GKLoginViewController.h"
 #import "GKAppDelegate.h"
+#import <QuartzCore/QuartzCore.h>
 
 #define kGenericTaskRewardKarmaPoints 40
-#define kSurveyUrl @"https://docs.google.com/forms/d/1xa8hBW3ESP8S0XsPFPlQB_eK2iaft406xY4FjWuJzuM/viewform"
+#define kSurveyUrl @"https://docs.google.com/forms/d/1nGfP66xIXPUpJfK_ODuNTgBrO1DCbUkfUjHiCdvFwOU/viewform"
 
 @interface GKViewController () {
     IBOutlet UILabel *karmaScoreLabel;
@@ -123,12 +124,17 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
+    for (UILabel *label in [cell subviews]) {
+        [label removeFromSuperview];
+    }
+    
     NSArray *reversedArray = [[taskHistory reverseObjectEnumerator] allObjects];
     UILabel *taskText = [[UILabel alloc] initWithFrame:cell.frame];
     [taskText setText:[reversedArray objectAtIndex:indexPath.row]];
     [taskText setFont:[UIFont systemFontOfSize:12]];
+    [taskText setTextColor:[UIColor colorWithRed:31.0f/255.0f green:96.0f/255.0f blue:127.0f/255.0f alpha:1]];
     [taskText setTextAlignment:NSTextAlignmentCenter];
-    
+    [taskText setBackgroundColor:[UIColor clearColor]];
     [cell addSubview:taskText];
     
     return cell;
@@ -149,6 +155,7 @@
              if (!error) {
                  self.userNameLabel.text = user.name;
                  self.userProfileImage.profileID = user.id;
+                 [self.userProfileImage.layer setCornerRadius:5.f];
              }
          }];
     }
